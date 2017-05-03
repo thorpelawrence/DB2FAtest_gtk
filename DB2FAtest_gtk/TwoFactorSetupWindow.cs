@@ -16,7 +16,7 @@ namespace DB2FAtest_gtk
 			this.Build();
 			this.key = key;
 			tfa = new TwoFactorAuthenticator();
-			var setupInfo = tfa.GenerateSetupCode("Redis test gtk", "Redis test gtk " + username, key, 300, 300);
+			var setupInfo = tfa.GenerateSetupCode("DB2FAtest gtk", username + "@redistestgtk", key, 300, 300);
 			qrImage.Pixbuf = new Gdk.Pixbuf(new MemoryStream(new WebClient().DownloadData(setupInfo.QrCodeSetupImageUrl)));
 		}
 
