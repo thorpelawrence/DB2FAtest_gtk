@@ -42,7 +42,7 @@ public RegisterWindow() :
 			userEntry.Add(new HashEntry("password", password));
 			if (enableTwoFactorCheck.Active)
 			{
-				var key = Encoding.UTF8.GetString(ArgonGenerateSalt());
+				var key = Convert.ToBase64String(ArgonGenerateSalt());
 				TwoFactorSetupWindow tfsw = new TwoFactorSetupWindow(username, key) { Modal = true };
 				tfsw.Show();
 				tfsw.Destroyed += delegate
