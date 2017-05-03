@@ -49,15 +49,15 @@
     <Reference Include="Google.Authenticator">
       <HintPath>..\packages\GoogleAuthenticator.1.2.1\lib\net45\Google.Authenticator.dll</HintPath>
     </Reference>
-    <Reference Include="StackExchange.Redis">
-      <HintPath>..\packages\StackExchange.Redis.1.2.1\lib\net45\StackExchange.Redis.dll</HintPath>
-    </Reference>
     <Reference Include="System.IO.Compression" />
     <Reference Include="Mono.Posix">
       <HintPath>..\packages\Mono.Posix.4.0.0.0\lib\net40\Mono.Posix.dll</HintPath>
     </Reference>
     <Reference Include="Sodium">
       <HintPath>..\packages\libsodium-net.0.10.0\lib\Net40\Sodium.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis">
+      <HintPath>..\packages\StackExchange.Redis.Mono.1.0.0\lib\StackExchange.Redis.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
