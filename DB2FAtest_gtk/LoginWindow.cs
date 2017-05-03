@@ -1,6 +1,5 @@
 ﻿using System;
 using StackExchange.Redis;
-using Google.Authenticator;
 using static Sodium.PasswordHash;
 
 namespace DB2FAtest_gtk
