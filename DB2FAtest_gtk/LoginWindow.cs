@@ -7,11 +7,7 @@ namespace DB2FAtest_gtk
 {
 	public partial class LoginWindow : Gtk.Window
 	{
-
-		ConnectionMultiplexer redis;
-		IDatabase db;
-
-		public string username;
+public string username;
 
 		public bool success = false;
 
@@ -19,12 +15,12 @@ namespace DB2FAtest_gtk
 				base(Gtk.WindowType.Toplevel)
 		{
 			this.Build();
-			redis = ConnectionMultiplexer.Connect("redis-17057.c8.us-east-1-4.ec2.cloud.redislabs.com:17057");
-			db = redis.GetDatabase();
 		}
 
 		protected void OnLoginButtonClicked(object sender, EventArgs e)
 		{
+			var redis = ConnectionMultiplexer.Connect("redis-17057.c8.us-east-1-4.ec2.cloud.redislabs.com:17057");
+			var db = redis.GetDatabase();
 			username = usernameEntry.Text;
 			if (!db.HashExists("users", username))
 			{
